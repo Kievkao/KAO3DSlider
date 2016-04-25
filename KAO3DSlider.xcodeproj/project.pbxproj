@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C58290C21CCE71CA00DF5B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */; };
+		C58290C41CCE71CA00DF5B8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290C31CCE71CA00DF5B8F /* ViewController.swift */; };
+		C58290C71CCE71CA00DF5B8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58290C51CCE71CA00DF5B8F /* Main.storyboard */; };
+		C58290C91CCE71CA00DF5B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C58290C81CCE71CA00DF5B8F /* Assets.xcassets */; };
+		C58290CC1CCE71CA00DF5B8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58290CA1CCE71CA00DF5B8F /* LaunchScreen.storyboard */; };
+		C58290D71CCE71CA00DF5B8F /* KAO3DSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290D61CCE71CA00DF5B8F /* KAO3DSliderTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C58290D31CCE71CA00DF5B8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C58290B61CCE71CA00DF5B8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C58290BD1CCE71CA00DF5B8F;
+			remoteInfo = KAO3DSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C58290BE1CCE71CA00DF5B8F /* KAO3DSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAO3DSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C58290C31CCE71CA00DF5B8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C58290C61CCE71CA00DF5B8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C58290C81CCE71CA00DF5B8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C58290CB1CCE71CA00DF5B8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C58290CD1CCE71CA00DF5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C58290D21CCE71CA00DF5B8F /* KAO3DSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KAO3DSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58290D61CCE71CA00DF5B8F /* KAO3DSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAO3DSliderTests.swift; sourceTree = "<group>"; };
+		C58290D81CCE71CA00DF5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C58290BB1CCE71CA00DF5B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58290CF1CCE71CA00DF5B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C58290B51CCE71CA00DF5B8F = {
+			isa = PBXGroup;
+			children = (
+				C58290C01CCE71CA00DF5B8F /* KAO3DSlider */,
+				C58290D51CCE71CA00DF5B8F /* KAO3DSliderTests */,
+				C58290BF1CCE71CA00DF5B8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C58290BF1CCE71CA00DF5B8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C58290BE1CCE71CA00DF5B8F /* KAO3DSlider.app */,
+				C58290D21CCE71CA00DF5B8F /* KAO3DSliderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C58290C01CCE71CA00DF5B8F /* KAO3DSlider */ = {
+			isa = PBXGroup;
+			children = (
+				C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */,
+				C58290C31CCE71CA00DF5B8F /* ViewController.swift */,
+				C58290C51CCE71CA00DF5B8F /* Main.storyboard */,
+				C58290C81CCE71CA00DF5B8F /* Assets.xcassets */,
+				C58290CA1CCE71CA00DF5B8F /* LaunchScreen.storyboard */,
+				C58290CD1CCE71CA00DF5B8F /* Info.plist */,
+			);
+			path = KAO3DSlider;
+			sourceTree = "<group>";
+		};
+		C58290D51CCE71CA00DF5B8F /* KAO3DSliderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C58290D61CCE71CA00DF5B8F /* KAO3DSliderTests.swift */,
+				C58290D81CCE71CA00DF5B8F /* Info.plist */,
+			);
+			path = KAO3DSliderTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C58290BD1CCE71CA00DF5B8F /* KAO3DSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58290DB1CCE71CA00DF5B8F /* Build configuration list for PBXNativeTarget "KAO3DSlider" */;
+			buildPhases = (
+				C58290BA1CCE71CA00DF5B8F /* Sources */,
+				C58290BB1CCE71CA00DF5B8F /* Frameworks */,
+				C58290BC1CCE71CA00DF5B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KAO3DSlider;
+			productName = KAO3DSlider;
+			productReference = C58290BE1CCE71CA00DF5B8F /* KAO3DSlider.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C58290D11CCE71CA00DF5B8F /* KAO3DSliderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58290DE1CCE71CA00DF5B8F /* Build configuration list for PBXNativeTarget "KAO3DSliderTests" */;
+			buildPhases = (
+				C58290CE1CCE71CA00DF5B8F /* Sources */,
+				C58290CF1CCE71CA00DF5B8F /* Frameworks */,
+				C58290D01CCE71CA00DF5B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C58290D41CCE71CA00DF5B8F /* PBXTargetDependency */,
+			);
+			name = KAO3DSliderTests;
+			productName = KAO3DSliderTests;
+			productReference = C58290D21CCE71CA00DF5B8F /* KAO3DSliderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C58290B61CCE71CA00DF5B8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = kievkao;
+				TargetAttributes = {
+					C58290BD1CCE71CA00DF5B8F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					C58290D11CCE71CA00DF5B8F = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C58290BD1CCE71CA00DF5B8F;
+					};
+				};
+			};
+			buildConfigurationList = C58290B91CCE71CA00DF5B8F /* Build configuration list for PBXProject "KAO3DSlider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C58290B51CCE71CA00DF5B8F;
+			productRefGroup = C58290BF1CCE71CA00DF5B8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C58290BD1CCE71CA00DF5B8F /* KAO3DSlider */,
+				C58290D11CCE71CA00DF5B8F /* KAO3DSliderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C58290BC1CCE71CA00DF5B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58290CC1CCE71CA00DF5B8F /* LaunchScreen.storyboard in Resources */,
+				C58290C91CCE71CA00DF5B8F /* Assets.xcassets in Resources */,
+				C58290C71CCE71CA00DF5B8F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58290D01CCE71CA00DF5B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C58290BA1CCE71CA00DF5B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58290C41CCE71CA00DF5B8F /* ViewController.swift in Sources */,
+				C58290C21CCE71CA00DF5B8F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58290CE1CCE71CA00DF5B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58290D71CCE71CA00DF5B8F /* KAO3DSliderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C58290D41CCE71CA00DF5B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C58290BD1CCE71CA00DF5B8F /* KAO3DSlider */;
+			targetProxy = C58290D31CCE71CA00DF5B8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C58290C51CCE71CA00DF5B8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C58290C61CCE71CA00DF5B8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C58290CA1CCE71CA00DF5B8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C58290CB1CCE71CA00DF5B8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C58290D91CCE71CA00DF5B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C58290DA1CCE71CA00DF5B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C58290DC1CCE71CA00DF5B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KAO3DSlider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kievkao.KAO3DSlider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C58290DD1CCE71CA00DF5B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KAO3DSlider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kievkao.KAO3DSlider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C58290DF1CCE71CA00DF5B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KAO3DSliderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kievkao.KAO3DSliderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KAO3DSlider.app/KAO3DSlider";
+			};
+			name = Debug;
+		};
+		C58290E01CCE71CA00DF5B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KAO3DSliderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kievkao.KAO3DSliderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KAO3DSlider.app/KAO3DSlider";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C58290B91CCE71CA00DF5B8F /* Build configuration list for PBXProject "KAO3DSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58290D91CCE71CA00DF5B8F /* Debug */,
+				C58290DA1CCE71CA00DF5B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C58290DB1CCE71CA00DF5B8F /* Build configuration list for PBXNativeTarget "KAO3DSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58290DC1CCE71CA00DF5B8F /* Debug */,
+				C58290DD1CCE71CA00DF5B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C58290DE1CCE71CA00DF5B8F /* Build configuration list for PBXNativeTarget "KAO3DSliderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58290DF1CCE71CA00DF5B8F /* Debug */,
+				C58290E01CCE71CA00DF5B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C58290B61CCE71CA00DF5B8F /* Project object */;
+}
