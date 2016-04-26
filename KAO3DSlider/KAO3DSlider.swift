@@ -8,15 +8,40 @@
 
 import UIKit
 
+protocol KAO3DSliderDelegate {
+    func sliderValueChanged(slider: KAO3DSlider, value: Float)
+}
+
 class KAO3DSlider: UIView {
 
     private let slider = UISlider()
+    private let backgroundView = KAO3DSliderBackgroundView()
+
+    var delegate: KAO3DSliderDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         self.setupBackground()
+        //self.setupScale()
         self.setupSlider()
+    }
+
+    private func setupBackground() {
+        self.addSubview(backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+
+        let viewsDict = ["backgroundView" :backgroundView]
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  viewsDict))
+    }
+
+    private func setupScale() {
+        let backImageView = UIImageView(image: UIImage(named: "sliderPart")?.resizableImageWithCapInsets(UIEdgeInsetsMake(5, 0, 5, 0), resizingMode: .Tile))
+
+        self.addSubview(backImageView)
+        self.addCenterConstraints(backImageView)
+        self.addConstraint(NSLayoutConstraint(item: backImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 30.0))
     }
 
     private func setupSlider() {
@@ -28,14 +53,6 @@ class KAO3DSlider: UIView {
         self.addCenterConstraints(slider)
     }
 
-    private func setupBackground() {
-        let backImageView = UIImageView(image: UIImage(named: "sliderPart")?.resizableImageWithCapInsets(UIEdgeInsetsMake(5, 0, 5, 0), resizingMode: .Tile))
-
-        self.addSubview(backImageView)
-        self.addCenterConstraints(backImageView)
-        self.addConstraint(NSLayoutConstraint(item: backImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 30.0))
-    }
-
     private func addCenterConstraints(view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: 0.0))
@@ -44,6 +61,7 @@ class KAO3DSlider: UIView {
     }
 
     func sliderValueChanged() {
-
+        backgroundView.setFilledPercentage((slider.value - slider.minimumValue) / (slider.maximumValue - slider.minimumValue))
+        delegate?.sliderValueChanged(self, value: slider.value)
     }
 }
