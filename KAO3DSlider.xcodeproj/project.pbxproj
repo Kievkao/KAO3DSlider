@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C57AF0171CCF859700798D8B /* KAO3DSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57AF0161CCF859700798D8B /* KAO3DSlider.swift */; };
 		C58290C21CCE71CA00DF5B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */; };
 		C58290C41CCE71CA00DF5B8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290C31CCE71CA00DF5B8F /* ViewController.swift */; };
 		C58290C71CCE71CA00DF5B8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58290C51CCE71CA00DF5B8F /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C57AF0161CCF859700798D8B /* KAO3DSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAO3DSlider.swift; sourceTree = "<group>"; };
 		C58290BE1CCE71CA00DF5B8F /* KAO3DSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAO3DSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58290C31CCE71CA00DF5B8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */,
 				C58290C31CCE71CA00DF5B8F /* ViewController.swift */,
+				C57AF0161CCF859700798D8B /* KAO3DSlider.swift */,
 				C58290C51CCE71CA00DF5B8F /* Main.storyboard */,
 				C58290C81CCE71CA00DF5B8F /* Assets.xcassets */,
 				C58290CA1CCE71CA00DF5B8F /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58290C41CCE71CA00DF5B8F /* ViewController.swift in Sources */,
+				C57AF0171CCF859700798D8B /* KAO3DSlider.swift in Sources */,
 				C58290C21CCE71CA00DF5B8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +394,7 @@
 				C58290DD1CCE71CA00DF5B8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C58290DE1CCE71CA00DF5B8F /* Build configuration list for PBXNativeTarget "KAO3DSliderTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +403,7 @@
 				C58290E01CCE71CA00DF5B8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
