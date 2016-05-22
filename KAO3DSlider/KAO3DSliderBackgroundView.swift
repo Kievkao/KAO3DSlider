@@ -10,7 +10,10 @@ import UIKit
 
 class KAO3DSliderBackgroundView: UIView {
 
-    private var fillPercentage: Float = 0.0
+    let TopEdgeHeight: CGFloat = 35.0
+    let TopMaxIncline: CGFloat = 35.0
+
+    private var fillPercentage: CGFloat = 0.0
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,14 +30,29 @@ class KAO3DSliderBackgroundView: UIView {
     }
 
     func setFilledPercentage(percentage: Float) {
-        fillPercentage = percentage
+        fillPercentage = CGFloat(percentage)
 
         self.setNeedsDisplay()
     }
 
     override func drawRect(rect: CGRect) {
+
+        let fillWidth = CGFloat(self.fillPercentage) * self.bounds.width
         let context = UIGraphicsGetCurrentContext()
+
+        // draw main progress rect
         CGContextSetFillColorWithColor(context, UIColor.greenColor().CGColor)
-        CGContextFillRect(context, CGRectMake(0, 0, CGFloat(self.fillPercentage) * self.bounds.width, self.bounds.height))
+        CGContextFillRect(context, CGRectMake(0, TopEdgeHeight, fillWidth, self.bounds.height - TopEdgeHeight))
+
+        // draw top inclined edge
+        let backFillWidth = self.fillPercentage * (self.bounds.width - TopMaxIncline*2)
+
+        CGContextMoveToPoint(context, TopMaxIncline, 0)
+        CGContextAddLineToPoint(context, TopMaxIncline + backFillWidth, 0)
+        CGContextAddLineToPoint(context, fillWidth, TopEdgeHeight)
+        CGContextAddLineToPoint(context, 0, TopEdgeHeight)
+
+        CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+        CGContextFillPath(context)
     }
 }
