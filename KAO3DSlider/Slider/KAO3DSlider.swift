@@ -14,8 +14,11 @@ protocol KAO3DSliderDelegate {
 
 class KAO3DSlider: UIView {
 
+    static let TopEdgeHeight: CGFloat = 20.0
+    static let TopMaxIncline: CGFloat = 35.0
+
     private let slider = UISlider()
-    private let backgroundView = KAO3DSliderBackgroundView()
+    private let backgroundView = KAO3DSliderBackgroundView(topEdgeHeight: TopEdgeHeight, topMaxIncline: TopMaxIncline)
 
     var delegate: KAO3DSliderDelegate?
 
@@ -23,7 +26,6 @@ class KAO3DSlider: UIView {
         super.awakeFromNib()
 
         self.setupBackground()
-        //self.setupScale()
         self.setupSlider()
     }
 
@@ -36,28 +38,20 @@ class KAO3DSlider: UIView {
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  viewsDict))
     }
 
-    private func setupScale() {
-        let backImageView = UIImageView(image: UIImage(named: "sliderPart")?.resizableImageWithCapInsets(UIEdgeInsetsMake(5, 0, 5, 0), resizingMode: .Tile))
-
-        self.addSubview(backImageView)
-        self.addCenterConstraints(backImageView)
-        self.addConstraint(NSLayoutConstraint(item: backImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 30.0))
-    }
-
     private func setupSlider() {
         slider.minimumTrackTintColor = UIColor.clearColor()
         slider.maximumTrackTintColor = UIColor.clearColor()
         slider.addTarget(self, action: #selector(KAO3DSlider.sliderValueChanged), forControlEvents: .ValueChanged)
 
         self.addSubview(slider)
-        self.addCenterConstraints(slider)
+
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: KAO3DSlider.TopEdgeHeight/2))
+        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0.0))
+        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
     }
 
-    private func addCenterConstraints(view: UIView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        self.addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: 0.0))
-        self.addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0.0))
-        self.addConstraint(NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
+    private func addCenterConstraints(view: UIView, yOffset:CGFloat) {
     }
 
     func sliderValueChanged() {

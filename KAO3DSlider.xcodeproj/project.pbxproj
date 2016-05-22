@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C57AF0171CCF859700798D8B /* KAO3DSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57AF0161CCF859700798D8B /* KAO3DSlider.swift */; };
-		C57AF0191CCF90FB00798D8B /* KAO3DSliderBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57AF0181CCF90FB00798D8B /* KAO3DSliderBackgroundView.swift */; };
 		C58290C21CCE71CA00DF5B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */; };
 		C58290C41CCE71CA00DF5B8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290C31CCE71CA00DF5B8F /* ViewController.swift */; };
 		C58290C71CCE71CA00DF5B8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58290C51CCE71CA00DF5B8F /* Main.storyboard */; };
 		C58290C91CCE71CA00DF5B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C58290C81CCE71CA00DF5B8F /* Assets.xcassets */; };
 		C58290CC1CCE71CA00DF5B8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58290CA1CCE71CA00DF5B8F /* LaunchScreen.storyboard */; };
 		C58290D71CCE71CA00DF5B8F /* KAO3DSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58290D61CCE71CA00DF5B8F /* KAO3DSliderTests.swift */; };
+		C59A803D1CF200E80032D8B0 /* KAO3DSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A803B1CF200E80032D8B0 /* KAO3DSlider.swift */; };
+		C59A803E1CF200E80032D8B0 /* KAO3DSliderBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A803C1CF200E80032D8B0 /* KAO3DSliderBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C57AF0161CCF859700798D8B /* KAO3DSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAO3DSlider.swift; sourceTree = "<group>"; };
-		C57AF0181CCF90FB00798D8B /* KAO3DSliderBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAO3DSliderBackgroundView.swift; sourceTree = "<group>"; };
 		C58290BE1CCE71CA00DF5B8F /* KAO3DSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAO3DSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58290C31CCE71CA00DF5B8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		C58290D21CCE71CA00DF5B8F /* KAO3DSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KAO3DSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58290D61CCE71CA00DF5B8F /* KAO3DSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAO3DSliderTests.swift; sourceTree = "<group>"; };
 		C58290D81CCE71CA00DF5B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C59A803B1CF200E80032D8B0 /* KAO3DSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAO3DSlider.swift; sourceTree = "<group>"; };
+		C59A803C1CF200E80032D8B0 /* KAO3DSliderBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAO3DSliderBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,9 @@
 		C58290C01CCE71CA00DF5B8F /* KAO3DSlider */ = {
 			isa = PBXGroup;
 			children = (
+				C59A803A1CF200E80032D8B0 /* Slider */,
 				C58290C11CCE71CA00DF5B8F /* AppDelegate.swift */,
 				C58290C31CCE71CA00DF5B8F /* ViewController.swift */,
-				C57AF0161CCF859700798D8B /* KAO3DSlider.swift */,
-				C57AF0181CCF90FB00798D8B /* KAO3DSliderBackgroundView.swift */,
 				C58290C51CCE71CA00DF5B8F /* Main.storyboard */,
 				C58290C81CCE71CA00DF5B8F /* Assets.xcassets */,
 				C58290CA1CCE71CA00DF5B8F /* LaunchScreen.storyboard */,
@@ -100,6 +99,15 @@
 				C58290D81CCE71CA00DF5B8F /* Info.plist */,
 			);
 			path = KAO3DSliderTests;
+			sourceTree = "<group>";
+		};
+		C59A803A1CF200E80032D8B0 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				C59A803B1CF200E80032D8B0 /* KAO3DSlider.swift */,
+				C59A803C1CF200E80032D8B0 /* KAO3DSliderBackgroundView.swift */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58290C41CCE71CA00DF5B8F /* ViewController.swift in Sources */,
-				C57AF0171CCF859700798D8B /* KAO3DSlider.swift in Sources */,
-				C57AF0191CCF90FB00798D8B /* KAO3DSliderBackgroundView.swift in Sources */,
+				C59A803D1CF200E80032D8B0 /* KAO3DSlider.swift in Sources */,
+				C59A803E1CF200E80032D8B0 /* KAO3DSliderBackgroundView.swift in Sources */,
 				C58290C21CCE71CA00DF5B8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
