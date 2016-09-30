@@ -9,7 +9,7 @@
 import UIKit
 
 protocol KAO3DSliderDelegate {
-    func sliderValueChanged(slider: KAO3DSlider, value: Float)
+    func sliderValueChanged(_ slider: KAO3DSlider, value: Float)
 }
 
 class KAO3DSlider: UIView {
@@ -17,8 +17,8 @@ class KAO3DSlider: UIView {
     static let TopEdgeHeight: CGFloat = 20.0
     static let TopMaxIncline: CGFloat = 35.0
 
-    private let slider = UISlider()
-    private let backgroundView = KAO3DSliderBackgroundView(topEdgeHeight: TopEdgeHeight, topMaxIncline: TopMaxIncline)
+    fileprivate let slider = UISlider()
+    fileprivate let backgroundView = KAO3DSliderBackgroundView(topEdgeHeight: TopEdgeHeight, topMaxIncline: TopMaxIncline)
 
     var delegate: KAO3DSliderDelegate?
 
@@ -29,29 +29,29 @@ class KAO3DSlider: UIView {
         self.setupSlider()
     }
 
-    private func setupBackground() {
+    fileprivate func setupBackground() {
         self.addSubview(backgroundView)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
 
         let viewsDict = ["backgroundView" :backgroundView]
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  viewsDict))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[backgroundView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  viewsDict))
     }
 
-    private func setupSlider() {
-        slider.minimumTrackTintColor = UIColor.clearColor()
-        slider.maximumTrackTintColor = UIColor.clearColor()
-        slider.addTarget(self, action: #selector(KAO3DSlider.sliderValueChanged), forControlEvents: .ValueChanged)
+    fileprivate func setupSlider() {
+        slider.minimumTrackTintColor = UIColor.clear
+        slider.maximumTrackTintColor = UIColor.clear
+        slider.addTarget(self, action: #selector(KAO3DSlider.sliderValueChanged), for: .valueChanged)
 
         self.addSubview(slider)
 
         slider.translatesAutoresizingMaskIntoConstraints = false
-        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: KAO3DSlider.TopEdgeHeight/2))
-        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0.0))
-        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
+        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: KAO3DSlider.TopEdgeHeight/2))
+        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0.0))
+        self.addConstraint(NSLayoutConstraint(item: slider, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0.0))
     }
 
-    private func addCenterConstraints(view: UIView, yOffset:CGFloat) {
+    fileprivate func addCenterConstraints(_ view: UIView, yOffset:CGFloat) {
     }
 
     func sliderValueChanged() {

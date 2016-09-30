@@ -15,22 +15,22 @@ class KAO3DSliderBackgroundView: UIView {
 
     let emptyColor = UIColor(red: 196.0/255.0, green: 196.0/255.0, blue: 196.0/255.0, alpha: 0.8)
     var topEdgeEmptyColor: UIColor {
-        return emptyColor.colorWithAlphaComponent(0.5)
+        return emptyColor.withAlphaComponent(0.5)
     }
 
     let mainColor = UIColor(red: 118.0/255.0, green: 180.0/255.0, blue: 68.0/255.0, alpha: 0.8)
     var topEdgeColor: UIColor {
-        return mainColor.colorWithAlphaComponent(0.5)
+        return mainColor.withAlphaComponent(0.5)
     }
 
     var shadowColor: UIColor {
-        return emptyColor.colorWithAlphaComponent(0.2)
+        return emptyColor.withAlphaComponent(0.2)
     }
 
-    private var fillPercentage: CGFloat = 0.0
+    fileprivate var fillPercentage: CGFloat = 0.0
 
     init(topEdgeHeight: CGFloat, topMaxIncline: CGFloat) {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
 
         self.topEdgeHeight = topEdgeHeight
         self.topMaxIncline = topMaxIncline
@@ -48,17 +48,17 @@ class KAO3DSliderBackgroundView: UIView {
         self.setup()
     }
 
-    private func setup() {
-        self.backgroundColor = UIColor.clearColor()
+    fileprivate func setup() {
+        self.backgroundColor = UIColor.clear
     }
 
-    func setFilledPercentage(percentage: Float) {
+    func setFilledPercentage(_ percentage: Float) {
         fillPercentage = CGFloat(percentage)
 
         self.setNeedsDisplay()
     }
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
 
         let viewWidth = self.bounds.width
         let viewHeight = self.bounds.height
@@ -67,57 +67,57 @@ class KAO3DSliderBackgroundView: UIView {
         let context = UIGraphicsGetCurrentContext()
 
         // main progress rect
-        CGContextSetFillColorWithColor(context, mainColor.CGColor)
-        CGContextFillRect(context, CGRectMake(0, topEdgeHeight, fillWidth, viewHeight - topEdgeHeight))
+        context?.setFillColor(mainColor.cgColor)
+        context?.fill(CGRect(x: 0, y: topEdgeHeight, width: fillWidth, height: viewHeight - topEdgeHeight))
 
         // remained main rect
-        CGContextSetFillColorWithColor(context, emptyColor.CGColor)
-        CGContextFillRect(context, CGRectMake(fillWidth, topEdgeHeight, viewWidth - fillWidth, viewHeight - topEdgeHeight))
+        context?.setFillColor(emptyColor.cgColor)
+        context?.fill(CGRect(x: fillWidth, y: topEdgeHeight, width: viewWidth - fillWidth, height: viewHeight - topEdgeHeight))
 
         // top inclined edge
         let backFillWidth = self.fillPercentage * (viewWidth - topMaxIncline*2)
 
-        CGContextMoveToPoint(context, topMaxIncline, 0)
-        CGContextAddLineToPoint(context, topMaxIncline + backFillWidth, 0)
-        CGContextAddLineToPoint(context, fillWidth, topEdgeHeight)
-        CGContextAddLineToPoint(context, 0, topEdgeHeight)
+        context?.move(to: CGPoint(x: topMaxIncline, y: 0))
+        context?.addLine(to: CGPoint(x: topMaxIncline + backFillWidth, y: 0))
+        context?.addLine(to: CGPoint(x: fillWidth, y: topEdgeHeight))
+        context?.addLine(to: CGPoint(x: 0, y: topEdgeHeight))
 
-        CGContextSetFillColorWithColor(context, topEdgeColor.CGColor)
-        CGContextFillPath(context)
+        context?.setFillColor(topEdgeColor.cgColor)
+        context?.fillPath()
 
         // shear
-        CGContextMoveToPoint(context, topMaxIncline + backFillWidth, 0)
-        CGContextAddLineToPoint(context, topMaxIncline + backFillWidth, viewHeight - topEdgeHeight)
-        CGContextAddLineToPoint(context, fillWidth, viewHeight)
-        CGContextAddLineToPoint(context, fillWidth, topEdgeHeight)
+        context?.move(to: CGPoint(x: topMaxIncline + backFillWidth, y: 0))
+        context?.addLine(to: CGPoint(x: topMaxIncline + backFillWidth, y: viewHeight - topEdgeHeight))
+        context?.addLine(to: CGPoint(x: fillWidth, y: viewHeight))
+        context?.addLine(to: CGPoint(x: fillWidth, y: topEdgeHeight))
 
-        CGContextSetFillColorWithColor(context, (topMaxIncline + backFillWidth > fillWidth) ? topEdgeColor.CGColor : topEdgeColor.colorWithAlphaComponent(0.5).CGColor)
-        CGContextFillPath(context)
+        context?.setFillColor((topMaxIncline + backFillWidth > fillWidth) ? topEdgeColor.cgColor : topEdgeColor.withAlphaComponent(0.5).cgColor)
+        context?.fillPath()
 
         // top inclined empty edge
-        CGContextMoveToPoint(context, topMaxIncline + backFillWidth, 0)
-        CGContextAddLineToPoint(context, viewWidth - topMaxIncline, 0)
-        CGContextAddLineToPoint(context, viewWidth, topEdgeHeight)
-        CGContextAddLineToPoint(context, fillWidth, topEdgeHeight)
+        context?.move(to: CGPoint(x: topMaxIncline + backFillWidth, y: 0))
+        context?.addLine(to: CGPoint(x: viewWidth - topMaxIncline, y: 0))
+        context?.addLine(to: CGPoint(x: viewWidth, y: topEdgeHeight))
+        context?.addLine(to: CGPoint(x: fillWidth, y: topEdgeHeight))
 
-        CGContextSetFillColorWithColor(context, topEdgeEmptyColor.CGColor)
-        CGContextFillPath(context)
+        context?.setFillColor(topEdgeEmptyColor.cgColor)
+        context?.fillPath()
 
         // left shadow
-        CGContextMoveToPoint(context, topMaxIncline, 0)
-        CGContextAddLineToPoint(context, topMaxIncline, viewHeight - topEdgeHeight)
-        CGContextAddLineToPoint(context, 0, viewHeight)
-        CGContextAddLineToPoint(context, 0, topEdgeHeight)
-        CGContextSetFillColorWithColor(context, shadowColor.CGColor)
-        CGContextFillPath(context)
+        context?.move(to: CGPoint(x: topMaxIncline, y: 0))
+        context?.addLine(to: CGPoint(x: topMaxIncline, y: viewHeight - topEdgeHeight))
+        context?.addLine(to: CGPoint(x: 0, y: viewHeight))
+        context?.addLine(to: CGPoint(x: 0, y: topEdgeHeight))
+        context?.setFillColor(shadowColor.cgColor)
+        context?.fillPath()
 
         // right shadow
-        CGContextMoveToPoint(context, viewWidth - topMaxIncline, 0)
-        CGContextAddLineToPoint(context, viewWidth - topMaxIncline, viewHeight - topEdgeHeight)
-        CGContextAddLineToPoint(context, viewWidth, viewHeight)
-        CGContextAddLineToPoint(context, viewWidth, topEdgeHeight)
-        CGContextSetFillColorWithColor(context, shadowColor.CGColor)
-        CGContextFillPath(context)
+        context?.move(to: CGPoint(x: viewWidth - topMaxIncline, y: 0))
+        context?.addLine(to: CGPoint(x: viewWidth - topMaxIncline, y: viewHeight - topEdgeHeight))
+        context?.addLine(to: CGPoint(x: viewWidth, y: viewHeight))
+        context?.addLine(to: CGPoint(x: viewWidth, y: topEdgeHeight))
+        context?.setFillColor(shadowColor.cgColor)
+        context?.fillPath()
 
     }
 }
